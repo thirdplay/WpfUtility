@@ -7,9 +7,12 @@ configuration: Release
 platform: Any CPU
 init:
 - cmd: git config --global core.autocrlf true
+nuget:
+  disable_publish_on_pr: true
 before_build:
 - cmd: nuget restore source\WpfUtility.sln
 build:
+  publish_nuget: true
   verbosity: minimal
 deploy:
 - provider: NuGet
