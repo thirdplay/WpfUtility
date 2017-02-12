@@ -17,3 +17,4 @@ deploy:
 - provider: NuGet
   api_key:
     secure: rl6crRDn84Zmx8pCLnBYShAbXIm0STSUviUmpYUY5jJXYbdXzLRQgfWopLJMTT1d
+  artifact: /WpfUtility.*\.nupkg/
