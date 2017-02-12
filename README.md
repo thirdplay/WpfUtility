@@ -3,8 +3,7 @@ WPFアプリのユーティリティです。
 
 ## 概要
 個人用のユーティリティ群です。  
-WPFアプリ開発用に [WinCap](https://github.com/thirdplay/WinCap) や [MetroTrilithon](https://github.com/Grabacr07/MetroTrilithon) 等から  
-切り出し、カスタマイズしたものです。  
+WPFアプリ開発用に [WinCap](https://github.com/thirdplay/WinCap) や [MetroTrilithon](https://github.com/Grabacr07/MetroTrilithon) 等から切り出し、カスタマイズしたものです。  
 
 ## 使用ライブラリ
 
