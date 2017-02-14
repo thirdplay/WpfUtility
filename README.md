@@ -1,8 +1,10 @@
 ## WpfUtility
 [![Build status (master)](https://img.shields.io/appveyor/ci/Thirdplay/WpfUtility/master.svg?style=flat-square)](https://ci.appveyor.com/project/thirdplay/wpfutility/branch/master)
+[![Release](https://img.shields.io/github/release/Thirdplay/WpfUtility.svg?style=flat-square)](https://github.com/Thirdplay/WpfUtility/releases/latest)
 [![NuGet](https://img.shields.io/nuget/v/WpfUtility.svg?style=flat-square)](https://www.nuget.org/packages/WpfUtility/)
 [![License](https://img.shields.io/github/license/Thirdplay/WpfUtility.svg?style=flat-square)](https://github.com/Thirdplay/WpfUtility/blob/master/LICENSE)
-WPFアプリのユーティリティです。
+
+WPFアプリのユーティリティです。
 
 ## 概要
 個人用のユーティリティ群です。  

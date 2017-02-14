@@ -106,6 +106,9 @@ namespace WpfUtility.Desktop
             this.appInstanceMessage.OnMessageReceived(commandLineArgs);
         }
 
+        /// <summary>
+        /// このインスタンスによって使用されているリソースを全て破棄します。
+        /// </summary>
         public void Dispose()
         {
             ChannelServices.UnregisterChannel(this.channel);
@@ -156,6 +159,10 @@ namespace WpfUtility.Desktop
         /// </summary>
         public string[] CommandLineArgs { get; }
 
+        /// <summary>
+        /// コンストラクタ。
+        /// </summary>
+        /// <param name="commandLineArgs">コマンドライン引数</param>
         public MessageEventArgs(string[] commandLineArgs)
         {
             this.CommandLineArgs = commandLineArgs;

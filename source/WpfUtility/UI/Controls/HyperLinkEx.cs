@@ -12,11 +12,18 @@ namespace WpfUtility.UI.Controls
     {
         #region Uri 依存関係プロパティ
 
+        /// <summary>
+        /// ハイパーリングのURIを取得または設定します。
+        /// </summary>
         public Uri Uri
         {
             get { return (Uri)this.GetValue(UriProperty); }
             set { this.SetValue(UriProperty, value); }
         }
+
+        /// <summary>
+        /// ハイパーリングのURI
+        /// </summary>
         public static readonly DependencyProperty UriProperty =
             DependencyProperty.Register(nameof(Uri), typeof(Uri), typeof(HyperlinkEx), new UIPropertyMetadata(null));
 
