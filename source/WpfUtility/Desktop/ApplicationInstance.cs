@@ -46,7 +46,12 @@ namespace WpfUtility.Desktop
         public ApplicationInstance(Assembly targetAssembly)
         {
             // アプリケーションの GUID を取得
-            var portName = ((GuidAttribute)Attribute.GetCustomAttribute(targetAssembly, typeof(GuidAttribute))).Value;
+            var guid = (GuidAttribute)Attribute.GetCustomAttribute(targetAssembly, typeof(GuidAttribute));
+            if (guid == null)
+            {
+                throw new Exception("アプリケーションにGUID が設定されていません。");
+            }
+            var portName = guid.Value;
 
             // セッションごとの URI となるように、セッション ID を URI として使用
             var uri = Process.GetCurrentProcess().SessionId.ToString(CultureInfo.InvariantCulture);
