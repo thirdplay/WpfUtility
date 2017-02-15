@@ -66,6 +66,7 @@
     <Compile Include="Desktop\Shortcut.cs" />
     <Compile Include="Lifetime\DisposableExtensions.cs" />
     <Compile Include="Lifetime\IDisposableHolder.cs" />
+    <Compile Include="Linq\EnumerableEx.cs" />
     <Compile Include="Mvvm\PropertyChangedExtensions.cs" />
     <Compile Include="Mvvm\ViewModelExtensions.cs" />
     <Compile Include="Mvvm\WindowViewModel.cs" />
