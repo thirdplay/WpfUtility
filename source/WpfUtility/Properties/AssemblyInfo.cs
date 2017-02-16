@@ -9,7 +9,7 @@ using System.Windows.Markup;
 [assembly: AssemblyTitle("WpfUtility")]
 [assembly: AssemblyDescription("Application Utility for Wpf")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("tillable")]
+[assembly: AssemblyCompany("tillable.net")]
 [assembly: AssemblyProduct("WpfUtility")]
 [assembly: AssemblyCopyright("Copyright ©  2017 thirdplay")]
 [assembly: AssemblyTrademark("")]
@@ -23,8 +23,8 @@ using System.Windows.Markup;
 // このプロジェクトが COM に公開される場合、次の GUID が typelib の ID になります
 [assembly: Guid("6c65bb8e-b2fe-4e43-a1ab-f8c17bc782c0")]
 
-[assembly: XmlnsDefinition("http://schemes.tillable/winfx/2017/personal/controls", "WpfUtility.UI.Controls")]
-[assembly: XmlnsDefinition("http://schemes.tillable/winfx/2017/personal/converters", "WpfUtility.UI.Converters")]
+[assembly: XmlnsDefinition("http://schemes.tillable.net/winfx/2017/personal/controls", "WpfUtility.UI.Controls")]
+[assembly: XmlnsDefinition("http://schemes.tillable.net/winfx/2017/personal/converters", "WpfUtility.UI.Converters")]
 
 // アセンブリのバージョン情報は次の 4 つの値で構成されています:
 //
@@ -36,5 +36,5 @@ using System.Windows.Markup;
 // すべての値を指定するか、下のように '*' を使ってビルドおよびリビジョン番号を 
 // 既定値にすることができます:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.1.2")]
-[assembly: AssemblyFileVersion("0.1.2")]
+[assembly: AssemblyVersion("0.1.3")]
+[assembly: AssemblyFileVersion("0.1.3")]
