@@ -44,6 +44,7 @@
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -68,6 +69,7 @@
     <Compile Include="Lifetime\IDisposableHolder.cs" />
     <Compile Include="Linq\EnumerableEx.cs" />
     <Compile Include="Mvvm\PropertyChangedExtensions.cs" />
+    <Compile Include="Mvvm\ValidatableViewModel.cs" />
     <Compile Include="Mvvm\ViewModelExtensions.cs" />
     <Compile Include="Mvvm\WindowViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

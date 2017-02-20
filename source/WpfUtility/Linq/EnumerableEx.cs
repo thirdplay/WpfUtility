@@ -9,7 +9,7 @@ namespace WpfUtility.Linq
     public static class EnumerableEx
     {
         /// <summary>
-        /// <see cref="System.Collections.Generic.IEnumerable"/> 型のコレクションのメンバーを連結します。
+        /// <see cref="System.Collections.IEnumerable"/> 型のコレクションのメンバーを連結します。
         /// 各メンバーの間には、指定した区切り記号が挿入されます。
         /// </summary>
         /// <typeparam name="T">任意の型</typeparam>
