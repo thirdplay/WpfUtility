@@ -83,7 +83,7 @@ namespace WpfUtility.Mvvm
                 }
                 return properties;
             }
-            return null;
+            return Enumerable.Empty<string>();
         }
 
         /// <summary>

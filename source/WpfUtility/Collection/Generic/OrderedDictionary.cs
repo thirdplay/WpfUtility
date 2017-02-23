@@ -76,7 +76,9 @@ namespace WpfUtility.Collection.Generic
             list = new List<TKey>();
 
             foreach (var e in dictionary)
+            {
                 Add(e.Key, e.Value);
+            }
         }
 
         /// <summary>

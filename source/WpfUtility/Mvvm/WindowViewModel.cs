@@ -101,7 +101,7 @@ namespace WpfUtility.Mvvm
         [EditorBrowsable(EditorBrowsableState.Never)]
         public void Initialize()
         {
-            if (this.IsClosed) return;
+            if (this.IsClosed) { return; }
 
             this.DialogResult = false;
 
@@ -151,7 +151,7 @@ namespace WpfUtility.Mvvm
         /// </summary>
         public virtual void Close()
         {
-            if (this.IsClosed) return;
+            if (this.IsClosed) { return; }
 
             this.SendWindowAction(WindowAction.Close);
         }
