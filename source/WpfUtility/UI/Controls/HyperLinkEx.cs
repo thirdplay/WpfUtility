@@ -40,7 +40,7 @@ namespace WpfUtility.UI.Controls
             {
                 try
                 {
-                    Process.Start(Uri.ToString());
+                    Process.Start(this.Uri.ToString());
                 }
                 catch (Exception ex)
                 {

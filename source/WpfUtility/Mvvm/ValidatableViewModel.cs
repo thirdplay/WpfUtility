@@ -90,10 +90,11 @@ namespace WpfUtility.Mvvm
         /// プロパティの入力値を検証します。
         /// </summary>
         /// <param name="propertyName">プロパティ名</param>
+        /// <param name="groupName">検証を行うグループ</param>
         /// <returns>検証エラーがある場合はtrue、それ以外はfalse</returns>
-        public bool Validate([CallerMemberName]string propertyName = null)
+        public bool Validate([CallerMemberName]string propertyName = null, string groupName = null)
         {
-            if (!string.IsNullOrEmpty(propertyName))
+            if (!string.IsNullOrEmpty(propertyName) && IsContaindValidationGroup(propertyName, groupName))
             {
                 object value = this.GetType().GetProperty(propertyName).GetValue(this);
                 var context = new ValidationContext(this) { MemberName = propertyName };
@@ -114,15 +115,19 @@ namespace WpfUtility.Mvvm
         /// <summary>
         /// プロパティの入力値を検証します。
         /// </summary>
+        /// <param name="groupName">検証を行うグループ</param>
         /// <returns>検証エラーがある場合はtrue、それ以外はfalse</returns>
-        public bool ValidateAll()
+        public bool ValidateAll(string groupName = null)
         {
             this.ClearErrors();
             var context = new ValidationContext(this);
             var validationErrors = new List<ValidationResult>();
             if (!Validator.TryValidateObject(this, context, validationErrors, true))
             {
-                var errors = validationErrors.Where(x => x.MemberNames.Any()).GroupBy(x => x.MemberNames.First());
+                var errors = validationErrors
+                    .Where(x => x.MemberNames.Any())
+                    .GroupBy(x => x.MemberNames.First())
+                    .Where(x => IsContaindValidationGroup(x.Key, groupName));
                 foreach (var error in errors)
                 {
                     this.SetErrors(error.Key, error.Select(x => x.ErrorMessage));
@@ -190,6 +195,27 @@ namespace WpfUtility.Mvvm
                     OnErrorsChanged(key);
                 }
             }
+        }
+
+        /// <summary>
+        /// 対象プロパティが、指定したグループに属するかの結果を返します。
+        /// </summary>
+        /// <param name="propertyName">対象プロパティ名</param>
+        /// <param name="groupName">指定を行うグループ</param>
+        /// <returns>グループに属する場合はtrue、それ以外はfalseを返す。</returns>
+        private bool IsContaindValidationGroup(string propertyName, string groupName)
+        {
+            if (string.IsNullOrEmpty(groupName)) return true;
+
+            var displayAttr = Attribute.GetCustomAttribute(GetType().GetProperty(propertyName), typeof(DisplayAttribute)) as DisplayAttribute;
+            if (displayAttr == null)
+            {
+                return false;
+            }
+
+            return displayAttr.GetGroupName()
+                .Split(',').ToList()
+                .Exists(x => x.Trim() == groupName);
         }
     }
 }

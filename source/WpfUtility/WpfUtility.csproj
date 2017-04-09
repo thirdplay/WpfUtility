@@ -65,6 +65,9 @@
     <Compile Include="Collection\Generic\OrderedDictionary.cs" />
     <Compile Include="Desktop\ApplicationInstance.cs" />
     <Compile Include="Desktop\Shortcut.cs" />
+    <Compile Include="Interop\Win32\RECT.cs" />
+    <Compile Include="Interop\Win32\SWP.cs" />
+    <Compile Include="Interop\Win32\User32.cs" />
     <Compile Include="Lifetime\DisposableExtensions.cs" />
     <Compile Include="Lifetime\IDisposableHolder.cs" />
     <Compile Include="Linq\EnumerableEx.cs" />
@@ -80,6 +83,7 @@
     <Compile Include="Serialization\SerializableProperty.cs" />
     <Compile Include="Serialization\SerializablePropertyBase.cs" />
     <Compile Include="Serialization\ValueChangedEventArgs.cs" />
+    <Compile Include="UI\Controls\CustomValidationPopup.cs" />
     <Compile Include="UI\Controls\HyperLinkEx.cs" />
     <Compile Include="UI\Converters\EnumToBooleanConverter.cs" />
   </ItemGroup>
@@ -99,6 +103,12 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Page Include="Styles\ValidationErrorTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
