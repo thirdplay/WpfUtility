@@ -11,7 +11,7 @@ using System.Windows.Markup;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("tillable.net")]
 [assembly: AssemblyProduct("WpfUtility")]
-[assembly: AssemblyCopyright("Copyright ©  2017 thirdplay")]
+[assembly: AssemblyCopyright("Copyright ©  2019 thirdplay")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

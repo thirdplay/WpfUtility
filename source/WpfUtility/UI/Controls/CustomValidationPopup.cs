@@ -40,10 +40,17 @@ namespace WpfUtility.UI.Controls
             set { SetValue(CloseOnMouseLeftButtonDownProperty, value); }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public static readonly DependencyProperty CloseOnMouseLeftButtonDownProperty =
             DependencyProperty.Register("CloseOnMouseLeftButtonDown", typeof(bool), typeof(CustomValidationPopup), new PropertyMetadata(true));
         #endregion
 
+        /// <summary>
+        /// マウスの左ボタンが要素の中で押されているときに呼び出されます。
+        /// </summary>
+        /// <param name="e">イベント引数</param>
         protected override void OnPreviewMouseLeftButtonDown(MouseButtonEventArgs e)
         {
             if (this.CloseOnMouseLeftButtonDown)
@@ -52,6 +59,11 @@ namespace WpfUtility.UI.Controls
             }
         }
 
+        /// <summary>
+        /// ロードイベント。
+        /// </summary>
+        /// <param name="sender">イベント発生元</param>
+        /// <param name="e">イベント引数</param>
         private void CustomValidationPopup_Loaded(object sender, RoutedEventArgs e)
         {
             var target = this.PlacementTarget as FrameworkElement;
