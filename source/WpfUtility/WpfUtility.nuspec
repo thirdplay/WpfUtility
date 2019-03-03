@@ -6,7 +6,7 @@
     <version>$version$</version>
     <authors>$author$</authors>
     <owners>$author$</owners>
-    <license>LICENSE</license>
+    <license type="file">LICENSE</license>
     <projectUrl>https://github.com/thirdplay/WpfUtility/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
