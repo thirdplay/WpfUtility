@@ -21,15 +21,8 @@ namespace WpfUtility.Mvvm
         /// </summary>
         public string Title
         {
-            get { return this._Title; }
-            set
-            {
-                if (this._Title != value)
-                {
-                    this._Title = value;
-                    this.RaisePropertyChanged();
-                }
-            }
+            get => _Title;
+            set => RaisePropertyChangedIfSet(ref this._Title, value);
         }
 
         #endregion
@@ -43,15 +36,8 @@ namespace WpfUtility.Mvvm
         /// </summary>
         public virtual bool CanClose
         {
-            get { return this._CanClose; }
-            set
-            {
-                if (this._CanClose != value)
-                {
-                    this._CanClose = value;
-                    this.RaisePropertyChanged();
-                }
-            }
+            get => _CanClose;
+            set => this.RaisePropertyChangedIfSet(ref _CanClose, value);
         }
 
         #endregion
@@ -65,15 +51,8 @@ namespace WpfUtility.Mvvm
         /// </summary>
         public bool IsClosed
         {
-            get { return this._IsClosed; }
-            private set
-            {
-                if (this._IsClosed != value)
-                {
-                    this._IsClosed = value;
-                    this.RaisePropertyChanged();
-                }
-            }
+            get => _IsClosed;
+            private set => this.RaisePropertyChangedIfSet(ref _IsClosed, value);
         }
 
         #endregion
