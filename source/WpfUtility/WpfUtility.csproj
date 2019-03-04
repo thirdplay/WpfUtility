@@ -85,7 +85,7 @@
     <Compile Include="UI\Converters\EnumToBooleanConverter.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..¥..¥LICENSE.txt">
+    <None Include="..\..\LICENSE.txt">
       <Visible>False</Visible>
       <Link>LICENSE.txt</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
