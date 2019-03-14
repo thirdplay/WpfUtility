@@ -64,7 +64,6 @@
     <Compile Include="Lifetime\DisposableExtensions.cs" />
     <Compile Include="Lifetime\IDisposableHolder.cs" />
     <Compile Include="Linq\EnumerableEx.cs" />
-    <Compile Include="Mvvm\PropertyChangedExtensions.cs" />
     <Compile Include="Mvvm\ValidatableViewModel.cs" />
     <Compile Include="Mvvm\ViewModelExtensions.cs" />
     <Compile Include="Mvvm\WindowViewModel.cs" />
@@ -103,6 +102,9 @@
     </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>rd /s /q "de", "en", "es", "fr", "it", "ja", "ko", "ru", "zh-Hans", "zh-Hant"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
